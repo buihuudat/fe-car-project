@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+import './access/styles/font.scss'
+import './access/styles/custom-scrollbar.scss'
+import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
+import { ToastContainer } from 'react-toastify'
 
-function App() {
+import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import AppLayout from './components/Layout/AppLayout'
+
+import Home from './Pages/Home';
+
+const App = () => {
+  const theme = createTheme({
+    palette: {
+      mode: 'dark'
+    }
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <ToastContainer />
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<AppLayout />}>
+            <Route path='/' element={<Home />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
+  )
 }
 
-export default App;
+export default App
