@@ -9,6 +9,7 @@ import Collection from './Collection';
 import Brands from './Brands'
 import News from './news';
 import CarComparison from './CarComparison';
+import CarsPremium from './CarsPremium';
 
 const bgSub = require('../../access/images/image/bg-subtitle.jpg')
 
@@ -123,7 +124,7 @@ const Home = () => {
         flexDirection: 'column',
         gap: 3,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
       }}
       >
         <Typography variant='h3' fontWeight={600}>Buy <span style={{color: 'orange'}}>Your Car</span> Quickly and Easily</Typography>
@@ -133,6 +134,8 @@ const Home = () => {
         <Button variant='contained' color='warning' size='large' >find your car</Button>
       </Box>
       <Container>
+        {/* cars premium */}
+        <CarsPremium />
         {/* cars comparison */}
         <CarComparison />
         {/* News */}

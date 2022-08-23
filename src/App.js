@@ -16,6 +16,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AppLayout from './components/Layout/AppLayout'
 
 import Home from './Pages/Home';
+import About from './Pages/About';
 
 const App = () => {
   const theme = createTheme({
@@ -31,6 +32,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<AppLayout />}>
             <Route path='/' element={<Home />} />
+            <Route path='about' element={<About />} />
           </Route>
         </Routes>
       </BrowserRouter>
