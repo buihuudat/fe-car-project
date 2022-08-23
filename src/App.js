@@ -4,6 +4,10 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import './access/styles/font.scss'
 import './access/styles/custom-scrollbar.scss'
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
 import { ToastContainer } from 'react-toastify'
 

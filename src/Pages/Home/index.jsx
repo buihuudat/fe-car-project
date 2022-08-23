@@ -2,12 +2,15 @@ import React from 'react'
 
 import CarouselHome from './Carousel'
 
-import { Box, Container, MenuItem, Paper, Typography, FormControl, InputLabel, Select } from '@mui/material'
+import { Box, Container, MenuItem, Paper, Typography, FormControl, InputLabel, Select, Button } from '@mui/material'
 import TimeToLeaveIcon from '@mui/icons-material/TimeToLeave';
 import LoadingButton from '@mui/lab/LoadingButton';
 import Collection from './Collection';
 import Brands from './Brands'
 import News from './news';
+import CarComparison from './CarComparison';
+
+const bgSub = require('../../access/images/image/bg-subtitle.jpg')
 
 const Home = () => {
   const [brand, setBrand] = React.useState('');
@@ -108,6 +111,30 @@ const Home = () => {
         <Collection />
         {/* brand */}
         <Brands />
+      </Container>
+      <Box
+      sx={{
+        background: `url(${bgSub}) no-repeat fixed`,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        width: '100%',
+        height: '500px',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 3,
+        justifyContent: 'center',
+        alignItems: 'center'
+      }}
+      >
+        <Typography variant='h3' fontWeight={600}>Buy <span style={{color: 'orange'}}>Your Car</span> Quickly and Easily</Typography>
+        <Typography variant='h5'>Our service facility is independently owned and operated providing full-service repair
+          and maintenance services.
+        </Typography>
+        <Button variant='contained' color='warning' size='large' >find your car</Button>
+      </Box>
+      <Container>
+        {/* cars comparison */}
+        <CarComparison />
         {/* News */}
         <News />
       </Container>
