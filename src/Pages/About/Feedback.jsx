@@ -6,7 +6,7 @@ import { Box, Chip, Divider, Typography } from "@mui/material";
 
 export default function Feedback() {
   return (
-    <Box p={5}>
+    <Box p={8}>
       <Typography p={3} variant='h4' fontWeight={600} align='center'>
         Clients FeedBack
       </Typography>

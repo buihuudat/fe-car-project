@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper";
+import { Pagination, Navigation, Autoplay } from "swiper";
 import { Link } from 'react-router-dom'
 
 const CarComparison = () => {
@@ -22,13 +22,16 @@ const CarComparison = () => {
       <Swiper
         slidesPerView={2}
         spaceBetween={30}
-        autoplay
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
+        }}
         loop={true}
         pagination={{
           clickable: true,
         }}
         navigation={true}
-        modules={[Pagination, Navigation]}
+        modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
         <SwiperSlide>

@@ -82,7 +82,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 const Footer = () => {
   return (
-    <Box mt={8} sx={{backgroundColor: 'action.hover', p: '3rem 0'}}>
+    <Box sx={{backgroundColor: 'action.hover', p: '3rem 0'}}>
       <Container>
       <Box sx={{
         display: 'flex',

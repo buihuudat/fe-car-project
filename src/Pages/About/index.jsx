@@ -10,8 +10,9 @@ import Banner from '../../components/common/Banner'
 import AboutBanner from './AboutBanner';
 import ExpertPeople from './ExpertPeople';
 import Feedback from './Feedback';
+import { Outlet } from 'react-router-dom';
 
-const imgContent = require('../../access/images/image/carAbout.png')
+const imgContent = require('../../access/images/image/about/carAbout.png')
 
 const About = () => {
   const [value, setValue] = React.useState('1');

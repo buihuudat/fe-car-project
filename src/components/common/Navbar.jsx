@@ -32,9 +32,9 @@ const logo = require("../../access/images/image/logo.png");
 const Navbar = (props) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [name, setName] = React.useState("");
-  const open = Boolean(anchorEl);
-
   const [scroll, setScroll] = React.useState(false);
+  
+  const open = Boolean(anchorEl);
   const listenScrollEvent = () => {
     window.scrollY > 80 ? setScroll(true) : setScroll(false);
   };
@@ -103,7 +103,7 @@ const Navbar = (props) => {
               </Typography>
             </Box>
             {/* nav link */}
-            <Box>
+            <Box sx={{display: 'flex', gap: 4}}>
               {/* home */}
               <Button component={Link} to="/" color="inherit">
                 HOME
@@ -121,6 +121,7 @@ const Navbar = (props) => {
                 open={name === "pages" && open}
                 onClose={handleClose}
                 MenuListProps={{ onMouseLeave: handleClose }}
+                onMouseLeave={handleClose}
               >
                 <MenuItem component={Link} to="/about" onClick={handleClose}>
                   About
@@ -128,14 +129,14 @@ const Navbar = (props) => {
                 <NestedMenuItem label="Compare" parentMenuOpen={open}>
                   <MenuItem
                     component={Link}
-                    to="/compare_cars"
+                    to="/about/compare_cars"
                     onClick={handleClose}
                   >
                     Compare Cars
                   </MenuItem>
                   <MenuItem
                     component={Link}
-                    to="/compare_details"
+                    to="/about/compare_details"
                     onClick={handleClose}
                   >
                     Compare Details
@@ -144,14 +145,14 @@ const Navbar = (props) => {
                 <NestedMenuItem label="Dealers" parentMenuOpen={open}>
                   <MenuItem
                     component={Link}
-                    to="/find_dealers"
+                    to="/about/find_dealers"
                     onClick={handleClose}
                   >
                     Find Dealers
                   </MenuItem>
                   <MenuItem
                     component={Link}
-                    to="/dealers_details"
+                    to="/about/dealers_details"
                     onClick={handleClose}
                   >
                     Dealers Details
@@ -159,17 +160,17 @@ const Navbar = (props) => {
                 </NestedMenuItem>
                 <MenuItem
                   component={Link}
-                  to="/finance_calculator"
+                  to="/about/finance_calculator"
                   onClick={handleClose}
                 >
                   Finance Calculator
                 </MenuItem>
-                <MenuItem component={Link} to="/FAQs" onClick={handleClose}>
+                <MenuItem component={Link} to="/about/FAQs" onClick={handleClose}>
                   FAQs
                 </MenuItem>
                 <MenuItem
                   component={Link}
-                  to="/testimonials"
+                  to="/about/testimonials"
                   onClick={handleClose}
                 >
                   Testimonials
@@ -191,21 +192,21 @@ const Navbar = (props) => {
               >
                 <MenuItem
                   component={Link}
-                  to="/service_style1"
+                  to="/services/service_style1"
                   onClick={handleClose}
                 >
                   Service Style 1
                 </MenuItem>
                 <MenuItem
                   component={Link}
-                  to="/service_style2"
+                  to="/services/service_style2"
                   onClick={handleClose}
                 >
                   Service Style 2
                 </MenuItem>
                 <MenuItem
                   component={Link}
-                  to="/service_details"
+                  to="/services/service_details"
                   onClick={handleClose}
                 >
                   Service Details
@@ -225,33 +226,33 @@ const Navbar = (props) => {
                 onClose={handleClose}
                 MenuListProps={{ onMouseLeave: handleClose }}
               >
-                <MenuItem component={Link} to="/our_shop" onClick={handleClose}>
+                <MenuItem component={Link} to="/shop/our_shop" onClick={handleClose}>
                   Our Shop
                 </MenuItem>
                 <MenuItem
                   component={Link}
-                  to="/classified_shop"
+                  to="/shop/classified_shop"
                   onClick={handleClose}
                 >
                   Classified Shop
                 </MenuItem>
                 <MenuItem
                   component={Link}
-                  to="/shop_list"
+                  to="/shop/shop_list"
                   onClick={handleClose}
                 >
                   Shop List
                 </MenuItem>
                 <MenuItem
                   component={Link}
-                  to="/product_details1"
+                  to="/shop/product_details1"
                   onClick={handleClose}
                 >
                   Product Details 1
                 </MenuItem>
                 <MenuItem
                   component={Link}
-                  to="/product_details2"
+                  to="/shop/product_details2"
                   onClick={handleClose}
                 >
                   Product Deatils 2
@@ -273,21 +274,21 @@ const Navbar = (props) => {
               >
                 <MenuItem
                   component={Link}
-                  to="/blog_list"
+                  to="/news/blog_list"
                   onClick={handleClose}
                 >
                   Blog List
                 </MenuItem>
                 <MenuItem
                   component={Link}
-                  to="/blog_grid"
+                  to="/news/blog_grid"
                   onClick={handleClose}
                 >
                   Blog Grid
                 </MenuItem>
                 <MenuItem
                   component={Link}
-                  to="/blog_details"
+                  to="/news/blog_details"
                   onClick={handleClose}
                 >
                   Blog Details
@@ -295,7 +296,7 @@ const Navbar = (props) => {
               </Menu>
               <Button
                 component={Link}
-                to="/contact"
+                to="/news/contact"
                 color="inherit"
                 onClick={handleClick}
                 onMouseOver={handleClick}

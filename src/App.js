@@ -17,6 +17,10 @@ import AppLayout from './components/Layout/AppLayout'
 
 import Home from './Pages/Home';
 import About from './Pages/About';
+import CompareCarPage from './Pages/About/CompareCarPage';
+import CompareDetailsPage from './Pages/About/CompareDetailsPage';
+import FindDealerPage from './Pages/About/FindDealerPage';
+import DealerDetails from './Pages/About/DealerDetails';
 
 const App = () => {
   const theme = createTheme({
@@ -31,8 +35,13 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<AppLayout />}>
-            <Route path='/' element={<Home />} />
+            <Route path='/' index element={<Home />} />
+
             <Route path='about' element={<About />} />
+            <Route path='about/compare_cars' element={<CompareCarPage />} />
+            <Route path='about/compare_details' element={<CompareDetailsPage />} />
+            <Route path='about/find_dealers' element={<FindDealerPage />} />
+            <Route path='about/dealers_details' element={<DealerDetails />} />
           </Route>
         </Routes>
       </BrowserRouter>

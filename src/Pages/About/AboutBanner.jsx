@@ -5,7 +5,7 @@ import MiscellaneousServicesOutlinedIcon from '@mui/icons-material/Miscellaneous
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
 import CardGiftcardOutlinedIcon from '@mui/icons-material/CardGiftcardOutlined';
 
-const imgBanner = require('../../access/images/image/about-banner.jpg')
+const imgBanner = require('../../access/images/image/about/about-banner.jpg')
 
 const dataBanner = [
   {

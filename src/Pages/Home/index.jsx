@@ -25,6 +25,7 @@ const Home = () => {
   return (
     <Box sx={{
       minHeight: '100vh',
+      pb: 8
     }}>
       <Box>
         <CarouselHome/>
