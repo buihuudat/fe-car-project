@@ -21,6 +21,10 @@ import CompareCarPage from './Pages/About/CompareCarPage';
 import CompareDetailsPage from './Pages/About/CompareDetailsPage';
 import FindDealerPage from './Pages/About/FindDealerPage';
 import DealerDetails from './Pages/About/DealerDetails';
+import FinanceCalculatorPage from './Pages/About/FinanceCalculatorPage';
+import FAQs from './Pages/About/FAQs';
+import Testimonial from './Pages/About/Testimonial';
+import ServiceStyle1 from './Pages/Services/ServiceStyle1';
 
 const App = () => {
   const theme = createTheme({
@@ -42,6 +46,11 @@ const App = () => {
             <Route path='about/compare_details' element={<CompareDetailsPage />} />
             <Route path='about/find_dealers' element={<FindDealerPage />} />
             <Route path='about/dealers_details' element={<DealerDetails />} />
+            <Route path='about/finance_calculator' element={<FinanceCalculatorPage />} />
+            <Route path='about/FAQs' element={<FAQs />} />
+            <Route path='about/testimonials' element={<Testimonial />} />
+
+            <Route path='services/service_style1' element={<ServiceStyle1 />} />
           </Route>
         </Routes>
       </BrowserRouter>

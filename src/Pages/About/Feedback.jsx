@@ -7,7 +7,7 @@ import { Box, Chip, Divider, Typography } from "@mui/material";
 export default function Feedback() {
   return (
     <Box p={8}>
-      <Typography p={3} variant='h4' fontWeight={600} align='center'>
+      <Typography p={5} variant='h4' fontWeight={600} align='center'>
         Clients FeedBack
       </Typography>
       <Swiper
@@ -17,6 +17,7 @@ export default function Feedback() {
           delay: 3500,
           disableOnInteraction: false,
         }}
+        loop={true}
         modules={[Autoplay, Pagination, Navigation]}
       >
         <SwiperSlide>

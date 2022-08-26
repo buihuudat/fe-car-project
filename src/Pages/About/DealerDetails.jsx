@@ -38,7 +38,7 @@ const dataDetails = [
 
 const DealerDetails = () => {
   return (
-    <Box p={8}>
+    <Box pb={8}>
       <Banner 
         img={Details_banner}
         title= 'Dealer Details'
