@@ -296,7 +296,7 @@ const Navbar = (props) => {
               </Menu>
               <Button
                 component={Link}
-                to="/news/contact"
+                to="/contact"
                 color="inherit"
                 onClick={handleClick}
                 onMouseOver={handleClick}

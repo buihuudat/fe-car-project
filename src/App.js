@@ -25,6 +25,9 @@ import FinanceCalculatorPage from './Pages/About/FinanceCalculatorPage';
 import FAQs from './Pages/About/FAQs';
 import Testimonial from './Pages/About/Testimonial';
 import ServiceStyle1 from './Pages/Services/ServiceStyle1';
+import ServiceDetail from './Pages/Services/ServiceDetail';
+import Shop from './Pages/Shop';
+import Contact from './Pages/Contact';
 
 const App = () => {
   const theme = createTheme({
@@ -51,6 +54,11 @@ const App = () => {
             <Route path='about/testimonials' element={<Testimonial />} />
 
             <Route path='services/service_style1' element={<ServiceStyle1 />} />
+            <Route path='services/service_details' element={<ServiceDetail />} />
+
+            <Route path='shop/our_shop' element={<Shop />} />
+
+            <Route path='contact' element={<Contact />} />
           </Route>
         </Routes>
       </BrowserRouter>
